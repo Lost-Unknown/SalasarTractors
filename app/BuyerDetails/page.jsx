@@ -50,8 +50,8 @@ const BuyerDetails = () => {
         if (detailid) getDetails()
     }, [detailid])
     return (
+        <Suspense>
         <div className='bg-white gap-1 flex w-full h-full p-4 flex-col'>
-            <Suspense>
             <h1 className='text-white p-2 w-full bg-gray-900 font-bold text-2xl'>Buyer Details</h1>
             <div className=' flex w-full'>
                 <p className='text-gray-900 w-1/2'><b>Name :  </b>{post.bname}</p>
@@ -131,8 +131,8 @@ const BuyerDetails = () => {
                     <h1 className='bg-red-400 text-white w-full p-2 text-center text-3xl'>Pending</h1>
                 </>)}
             </div>
-            </Suspense>
         </div>
+    </Suspense>
     )
 }
 
