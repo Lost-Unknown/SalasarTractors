@@ -1,6 +1,7 @@
 "use client"
 import React from 'react'
 import { useSearchParams } from 'next/navigation';
+import { Suspense } from 'react';
 import { useState,useEffect } from 'react';
 import { useRouter } from 'next/navigation';
 
@@ -241,7 +242,7 @@ const Buyer_Edit = () => {
   return (
     <div className="max-w-4xl mx-auto p-6 bg-white rounded-lg shadow-md">
     <h1 className="text-2xl font-bold mb-6">Edit Tractor Entry</h1>
-    
+    <Suspense>
     <form onSubmit={handleSubmit}>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         {/* Basic Information */}
@@ -716,6 +717,7 @@ const Buyer_Edit = () => {
         </button>
       </div>
     </form>
+    </Suspense>
   </div>
   )
 }
