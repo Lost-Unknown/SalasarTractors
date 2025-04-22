@@ -1,7 +1,6 @@
 "use client"
 import { React, useEffect, useState } from 'react'
 import { useSearchParams } from 'next/navigation'
-import { Suspense } from 'react'
 
 const BuyerDetails = () => {
     const searchParams = useSearchParams()
@@ -50,7 +49,6 @@ const BuyerDetails = () => {
         if (detailid) getDetails()
     }, [detailid])
     return (
-        <Suspense>
         <div className='bg-white gap-1 flex w-full h-full p-4 flex-col'>
             <h1 className='text-white p-2 w-full bg-gray-900 font-bold text-2xl'>Buyer Details</h1>
             <div className=' flex w-full'>
@@ -132,7 +130,6 @@ const BuyerDetails = () => {
                 </>)}
             </div>
         </div>
-    </Suspense>
     )
 }
 
