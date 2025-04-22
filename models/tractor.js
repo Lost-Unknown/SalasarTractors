@@ -29,7 +29,7 @@ const TractorSchema = new Schema({
     loanprovider:{type:String},
     pendingamount:{type:Number},
     oldtractorname:{type:String},
-    oldtractorsaleamount:{type:String},
+    oldtractorsaleamount:{type:Number},
     oldSaleMediator:{type:String},
     regno:{type:String},
     insureno:{type:String},

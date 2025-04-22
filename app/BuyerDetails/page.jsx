@@ -79,7 +79,7 @@ const BuyerDetails = () => {
                 post.chequeamount.map((cheque, index) => (
                     <div className='flex w-full' key={index}>
                         <p className='text-gray-900 w-1/3'><b>Cheque Amount Received : </b>Rs {cheque.amount}</p>
-                        <p className='text-gray-900 w-1/3'><b>Cheque No. : </b>{cheque.chequeno}</p>
+                        <p className='text-gray-900 w-1/3'><b>Cheque No. : </b>{cheque.chequeid}</p>
                         <p className='text-gray-900 w-1/3'><b>Receiving Date : </b>{new Date(cheque.receivedate).toLocaleDateString()}</p>
                     </div>
                 ))

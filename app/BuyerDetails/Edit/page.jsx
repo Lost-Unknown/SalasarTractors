@@ -22,17 +22,17 @@ const Buyer_Edit = () => {
         cashamount: [{ amount: 0, receivedate: new Date() }],
         onlineamount: [{ amount: 0, transid: '', receivedate: new Date() }],
         chequeamount: [{ amount: 0, chequeid: '', receivedate: new Date() }],
-        loanamount: null,
+        loanamount: 0,
         loantranid: '',
         loanprovider: '',
-        pendingamount: null,
+        pendingamount: 0,
         oldtractorname: '',
-        oldtractorsaleamount: '',
+        oldtractorsaleamount: 0,
         oldSaleMediator: '',
         regno: '',
         insureno: '',
-        regamount: null,
-        insureamount: null
+        regamount: 0,
+        insureamount: 0
       });
     
       useEffect(() => {
@@ -606,7 +606,7 @@ const Buyer_Edit = () => {
                 Old Tractor Name
               </label>
               <input
-                type="text"
+                type="number"
                 name="oldtractorname"
                 value={formData.oldtractorname}
                 onChange={handleInputChange}
